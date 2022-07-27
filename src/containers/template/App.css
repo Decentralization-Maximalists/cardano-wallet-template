@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Aldrich&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
+
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+::-webkit-scrollbar-track {
+	background: #666;
+	z-index: 1;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #ddd;
+	border-radius: 5px;
+}
+
+.Resizer {
+	z-index: 1;
+}
+
+.logo {
+	animation: fadein 5s;
+}
+  
+@keyframes fadein {
+	from { opacity: 0 }
+	to { opacity: 1 }
+}
+  
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.rainbow-box {
+	font: small-caps bold 15px/30px system-ui, serif;
+	border-radius: 5px;
+	background: linear-gradient(
+		160deg,
+		#560a9d 10%,
+		#b70cff 20%,
+		#2e06fe 40%,
+		#fe0001 60%,
+		#fe6008 70%,
+		#ffff01 80%,
+		#2fe401 100%,
+		#a20328 100%
+	);
+}
+
+.rainbow-box:hover {
+	box-shadow: -4px 4px 12px rgb(35 177 240 / 35%), 4px 4px 12px rgb(186 27 241 / 50%);
+}
+
+.rainbow-border {
+	background: #2d3037;
+	position: relative;
+	border: 4px solid #2d3037;
+	border-radius: 6px;
+	font-family: 'Aldrich'; font-size: 18px; font-style: normal; font-variant: normal; font-weight: 300; line-height: 26.4px;
+}
+
+.rainbow-border2 {
+	--angle: 0deg;
+	border: 4px solid;
+	border-radius: 6px;
+	border-image: linear-gradient(
+			var(--angle),
+			rgba(255, 0, 0, 1) 0%,
+			rgba(255, 154, 0, 1) 10%,
+			rgba(208, 222, 33, 1) 20%,
+			rgba(79, 220, 74, 1) 30%,
+			rgba(28, 127, 238, 1) 60%,
+			rgba(95, 21, 242, 1) 70%,
+			rgba(186, 12, 248, 1) 80%,
+			rgba(251, 7, 217, 1) 90%,
+			rgba(255, 0, 0, 1) 100%
+		)
+		1;
+	animation: 10s rotate linear infinite;
+}
+
+.rainbow-border:hover {
+	--angle: 0deg;
+	border: solid 4px ;
+	border-radius: 6px;
+	border-image: linear-gradient(
+			var(--angle),
+			rgba(255, 0, 0, 1) 0%,
+			rgba(255, 154, 0, 1) 10%,
+			rgba(208, 222, 33, 1) 20%,
+			rgba(79, 220, 74, 1) 30%,
+			rgba(28, 127, 238, 1) 60%,
+			rgba(95, 21, 242, 1) 70%,
+			rgba(186, 12, 248, 1) 80%,
+			rgba(251, 7, 217, 1) 90%,
+			rgba(255, 0, 0, 1) 100%
+		)
+		1;
+	animation: 10s rotate linear infinite;
+}
+
+@keyframes rotate {
+	to {
+		--angle: 360deg;
+	}
+}
+
+@property --angle {
+	syntax: '<angle>';
+	initial-value: 0deg;
+	inherits: false;
+}
+
+.h1 { font-family: 'Aldrich'; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; text-transform: uppercase; }
+.h2 { font-family: 'Aldrich'; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 500; line-height: 15.4px; text-transform: uppercase; }  
+.h3 { font-family: 'Aldrich'; font-size: 18px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 15.4px; text-transform: capitalize; } 
+.p { font-family: Aldrich; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; text-transform: uppercase;} 
+.blockquote { font-family: Aldrich; font-size: 21px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 30px; } 
+.pre { font-family: Aldrich; font-size: 13px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 18.5714px; }
+
+.glow-on-hover {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+
+	border-radius: 5px;
+	background: linear-gradient(
+		160deg,
+		#560a9d 10%,
+		#b70cff 20%,
+		#2e06fe 40%,
+		#fe0001 60%,
+		#fe6008 70%,
+		#ffff01 80%,
+		#2fe401 100%,
+		#a20328 100%
+	);
+}
+
+.glow-on-hover {
+	font: small-caps bold 18px/30px system-ui, serif;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+		160deg,
+		#560a9d 10%,
+		#b70cff 20%,
+		#2e06fe 40%,
+		#fe0001 60%,
+		#fe6008 70%,
+		#ffff01 80%,
+		#2fe401 100%,
+		#a20328 100%
+	);
+    left: 0;
+    top: 0;
+    border-radius: 5px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
